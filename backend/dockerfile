@@ -6,7 +6,7 @@ COPY . /opt/
 
 RUN rm -f src/main/resources/application.properties
 RUN cp -rf application.properties src/main/resources/application.properties
-RUN apt update -y && apt install openjdk-17-jdk -y
+RUN apt update -y && apt install openjdk-21-jdk -y
 RUN apt update -y && apt install maven -y
 RUN mvn clean package -DskipTests
 
